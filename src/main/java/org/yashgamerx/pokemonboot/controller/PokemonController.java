@@ -8,11 +8,10 @@ import org.yashgamerx.pokemonboot.dto.PokemonDto;
 import org.yashgamerx.pokemonboot.repo.PokemonRegionRepository;
 import org.yashgamerx.pokemonboot.repo.PokemonRepository;
 
-import java.util.Optional;
-
 @Controller
 @RequestMapping("/pokemon")
 public class PokemonController {
+
     private final PokemonRepository pokemonRepository;
     private final PokemonRegionRepository pokemonRegionRepository;
     public PokemonController(
