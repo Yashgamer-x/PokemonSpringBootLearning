@@ -33,4 +33,32 @@ public class PokemonRegionService {
         }
         return Optional.empty();
     }
+
+    public void savePokemonRegion(PokemonRegion pokemonRegion) {
+        pokemonRegionRepository.save(pokemonRegion);
+    }
+
+    /**
+     * Validates the given {@link PokemonRegion} to ensure it meets basic criteria.
+     * <p>
+     * This method checks:
+     * <ul>
+     *   <li>The region object itself is not {@code null}</li>
+     *   <li>The region name is not {@code null}, or empty</li>
+     *   <li>The population is a positive integer (≥ 1)</li>
+     * </ul>
+     * If any condition fails, an {@link IllegalArgumentException} is thrown.
+     *
+     * @param pokemonRegion the {@link PokemonRegion} to validate
+     * @throws IllegalArgumentException if the region is invalid or missing required fields
+     */
+    public void validatePokemonRegion(PokemonRegion pokemonRegion) {
+        if(
+                pokemonRegion.getName() == null ||
+                pokemonRegion.getName().isEmpty() ||
+                pokemonRegion.getPopulation() < 1
+        ) {
+            throw new IllegalArgumentException("Region was unable to meet the criteria");
+        }
+    }
 }
