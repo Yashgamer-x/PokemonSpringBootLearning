@@ -6,6 +6,6 @@ import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import java.util.Optional;
 
 public interface PokemonRegionRepository extends CrudRepository<PokemonRegion, Integer> {
-    PokemonRegion findPokemonRegionById(Integer id);
-    PokemonRegion findPokemonRegionByName(String name);
+    Optional<PokemonRegion> findPokemonRegionById(Integer id);
+    Optional<PokemonRegion> findPokemonRegionByName(String name);
 }

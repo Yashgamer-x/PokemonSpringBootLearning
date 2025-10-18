@@ -7,66 +7,50 @@ import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
 import org.yashgamerx.pokemonboot.repo.PokemonRegionRepository;
 import org.yashgamerx.pokemonboot.repo.PokemonRepository;
+import org.yashgamerx.pokemonboot.service.PokemonRegionService;
+import org.yashgamerx.pokemonboot.service.PokemonService;
 
 @Controller
 @RequestMapping("/pokemon")
 public class PokemonController {
+    private final PokemonRegionService pokemonRegionService;
+    private final PokemonService pokemonService;
 
-    private final PokemonRepository pokemonRepository;
-    private final PokemonRegionRepository pokemonRegionRepository;
     public PokemonController(
-            PokemonRepository pokemonRepository,
-            PokemonRegionRepository pokemonRegionRepository
+            PokemonRegionService pokemonRegionService,
+            PokemonService pokemonService
     ) {
-        this.pokemonRepository = pokemonRepository;
-        this.pokemonRegionRepository = pokemonRegionRepository;
+        this.pokemonRegionService = pokemonRegionService;
+        this.pokemonService = pokemonService;
     }
 
     @PostMapping("/add")
     public @ResponseBody String addPokemon(@RequestBody PokemonDto pokemonDto) {
-        PokemonRegion pokeRegion=null;
+        var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
+        var pokemon = pokemonService.createPokemon(pokemonDto, pokeRegion);
+        pokemonService.savePokemon(pokemon);
+        return pokemon.getName()+" was added successfully to "+pokeRegion.get().getName()+" Region";
+    }
+
+    @PutMapping("/update")
+    public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
+        var pokemon = pokemonService.findPokemonByNameByDto(pokemonDto);
+        PokemonRegion pokeRegion = null;
+        if(pokemonDto.getAbility() != null && !pokemonDto.getAbility().isEmpty()){
+            pokemon.setAbility(pokemonDto.getAbility());
+        }
+        if(pokemonDto.getLevel() != null && pokemonDto.getLevel()>0){
+            pokemon.setLevel(pokemonDto.getLevel());
+        }
         if(pokemonDto.getRegionName() != null && !pokemonDto.getRegionName().isEmpty()){
             pokeRegion =  pokemonRegionRepository.findPokemonRegionByName(pokemonDto.getRegionName());
         } else if( pokemonDto.getRegionId() != null) {
             pokeRegion = pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
         }
-        if(pokeRegion == null){
-            return "Invalid Region";
+        if(pokeRegion != null){
+            pokemon.setPokemonRegion(pokeRegion);
         }
-
-        Pokemon pokemon = new Pokemon();
-        pokemon.setName(pokemonDto.getName());
-        pokemon.setAbility(pokemonDto.getAbility());
-        pokemon.setLevel(pokemonDto.getLevel());
-        pokemon.setPokemonRegion(pokeRegion);
-
         pokemonRepository.save(pokemon);
-        return pokemon.getName()+" was added successfully to "+pokeRegion.getName()+" Region";
-    }
-
-    @PutMapping("/update")
-    public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
-        try{
-            var pokemon = pokemonRepository.findPokemonByName(pokemonDto.getName());
-            PokemonRegion pokeRegion = null;
-            if(pokemonDto.getAbility() != null && !pokemonDto.getAbility().isEmpty()){
-                pokemon.setAbility(pokemonDto.getAbility());
-            }
-            if(pokemonDto.getLevel() != null && pokemonDto.getLevel()>0){
-                pokemon.setLevel(pokemonDto.getLevel());
-            }
-            if(pokemonDto.getRegionName() != null && !pokemonDto.getRegionName().isEmpty()){
-                pokeRegion =  pokemonRegionRepository.findPokemonRegionByName(pokemonDto.getRegionName());
-            } else if( pokemonDto.getRegionId() != null) {
-                pokeRegion = pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
-            }
-            if(pokeRegion != null){
-                pokemon.setPokemonRegion(pokeRegion);
-            }
-            pokemonRepository.save(pokemon);
-            return pokemon.getName()+" was updated successfully";
-        }catch(Exception e){
-            return "Invalid Pokemon";
-        }
+        return pokemon.getName()+" was updated successfully";
     }
 }

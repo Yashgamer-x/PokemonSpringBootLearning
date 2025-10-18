@@ -4,8 +4,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PokemonRepository extends CrudRepository<Pokemon, Integer> {
     List<Pokemon> findPokemonByAbilityEqualsIgnoreCase(String ability);
-    Pokemon findPokemonByName(String name);
+    Optional<Pokemon> findPokemonByName(String name);
 }
