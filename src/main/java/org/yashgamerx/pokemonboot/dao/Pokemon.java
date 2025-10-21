@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Pokemon class is connected to Pokemon table in Pokemon Database <br>
+ * Pokémon class is connected to Pokémon table in Pokémon Database <br>
  **/
 @Entity
 @Getter @Setter

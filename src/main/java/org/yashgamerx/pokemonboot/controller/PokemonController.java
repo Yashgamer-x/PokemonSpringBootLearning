@@ -1,5 +1,9 @@
 package org.yashgamerx.pokemonboot.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
@@ -13,6 +17,7 @@ import org.yashgamerx.pokemonboot.service.PokemonService;
 @Controller
 @RequestMapping("/pokemon")
 public class PokemonController {
+    Logger log = LoggerFactory.getLogger(PokemonController.class);
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
 
@@ -22,6 +27,22 @@ public class PokemonController {
     ) {
         this.pokemonRegionService = pokemonRegionService;
         this.pokemonService = pokemonService;
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<Pokemon> pokemon(@RequestParam String name) {
+        var pokemonOptional = pokemonService.findPokemonByName(name);
+        Pokemon pokemon;
+        if (pokemonOptional.isPresent()) {
+            pokemon = pokemonOptional.get();
+        }else{
+            log.error("Pokemon not found");
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        log.info("Pokemon found with name {}",pokemon.getName());
+        return ResponseEntity
+                .ok()
+                .body(pokemon);
     }
 
     /**
@@ -45,10 +66,11 @@ public class PokemonController {
     public @ResponseBody String addPokemon(@RequestBody PokemonDto pokemonDto) {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
-                new PokemonRegionException(pokemonDto.getRegionName())
+                new PokemonRegionException("Unable to find Pokemon Region")
         );
         var pokemon = pokemonService.createPokemon(pokemonDto, pokemonRegion);
         pokemonService.savePokemon(pokemon);
+        log.info("Pokemon Added Successfully");
         return pokemon.getName()+" was added successfully to "+pokemonRegion.getName()+" Region";
     }
 
@@ -72,10 +94,18 @@ public class PokemonController {
     @PutMapping("/update")
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
         var pokemonOptional = pokemonService.findPokemonByNameByDto(pokemonDto);
-        var pokemon = pokemonOptional.orElseThrow(()->new PokemonException(pokemonDto.getName()));
+        var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon Region"));
         var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
         pokemonService.updatePokemon(pokemonDto, pokemon, pokeRegion);
         pokemonService.savePokemon(pokemon);
         return pokemon.getName()+" was updated successfully";
+    }
+
+    @DeleteMapping("/delete")
+    public @ResponseBody String deletePokemon(@RequestParam String name){
+        var pokemonOptional = pokemonService.findPokemonByName(name);
+        var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon"));
+        pokemonService.deletePokemonById(pokemon.getId());
+        return pokemon.getName()+" was removed successfully";
     }
 }

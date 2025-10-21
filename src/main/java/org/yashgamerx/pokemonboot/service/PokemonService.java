@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
+import org.yashgamerx.pokemonboot.exception.PokemonException;
 import org.yashgamerx.pokemonboot.repo.PokemonRepository;
 
 import java.util.Optional;
@@ -38,13 +39,13 @@ public class PokemonService {
      */
     public Pokemon createPokemon(PokemonDto pokemonDto, PokemonRegion pokemonRegion) {
         if (pokemonDto.getName() == null || pokemonDto.getName().isBlank()) {
-            throw new IllegalArgumentException("Pokemon name must not be null or blank");
+            throw new PokemonException("Pokemon name must not be null or blank");
         }
         if (pokemonDto.getAbility() == null || pokemonDto.getAbility().isBlank()) {
-            throw new IllegalArgumentException("Pokemon ability must not be null or blank");
+            throw new PokemonException("Pokemon ability must not be null or blank");
         }
         if (pokemonDto.getLevel() == null || pokemonDto.getLevel() < 1) {
-            throw new IllegalArgumentException("Pokemon level must be a positive integer");
+            throw new PokemonException("Pokemon level must be a positive integer");
         }
         var pokemon = new Pokemon();
         pokemon.setName(pokemonDto.getName());
@@ -82,6 +83,10 @@ public class PokemonService {
         return pokemonRepository.findPokemonByName(pokemonName);
     }
 
+    public Optional<Pokemon> findPokemonByName(String name) {
+        return pokemonRepository.findPokemonByName(name);
+    }
+
     /**
      * Updates the attributes of an existing {@link Pokemon} entity using data from the provided {@link PokemonDto}.
      * <p>
@@ -107,4 +112,7 @@ public class PokemonService {
         pokemonRegion.ifPresent(pokemon::setPokemonRegion);
     }
 
+    public void deletePokemonById(Integer id) {
+        pokemonRepository.deleteById(id);
+    }
 }
