@@ -1,9 +1,7 @@
 package org.yashgamerx.pokemonboot.controller;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -74,7 +72,7 @@ public class PokemonController {
 
     @PutMapping("/update")
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
-        var pokemonOptional = pokemonService.findPokemonByNameByDto(pokemonDto);
+        var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.getName());
         var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon Region"));
         var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
         pokemonService.updatePokemon(pokemonDto, pokemon, pokeRegion);

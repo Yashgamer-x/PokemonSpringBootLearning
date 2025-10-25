@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 /**
  * Pokémon class is connected to Pokémon table in Pokémon Database <br>
  **/
@@ -17,6 +19,8 @@ public class Pokemon {
     private String name;
     private Integer level;
     private String ability;
+    @Enumerated(EnumType.STRING)
+    private List<PokemonType> types;
     @ManyToOne
     private PokemonRegion pokemonRegion;
 }

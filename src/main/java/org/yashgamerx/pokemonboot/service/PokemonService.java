@@ -39,11 +39,6 @@ public class PokemonService {
         pokemonRepository.save(pokemon);
     }
 
-    public Optional<Pokemon> findPokemonByNameByDto(PokemonDto pokemonDto) {
-        var pokemonName = pokemonDto.getName();
-        return pokemonRepository.findPokemonByName(pokemonName);
-    }
-
     public Optional<Pokemon> findPokemonByName(String name) {
         return pokemonRepository.findPokemonByName(name);
     }
@@ -54,6 +49,9 @@ public class PokemonService {
         }
         if(pokemonDto.getLevel() != null && pokemonDto.getLevel()>0){
             pokemon.setLevel(pokemonDto.getLevel());
+        }
+        if(pokemonDto.getPokemonTypes() != null && !pokemonDto.getPokemonTypes().isEmpty()){
+            pokemon.setTypes(pokemonDto.getPokemonTypes());
         }
         pokemonRegion.ifPresent(pokemon::setPokemonRegion);
     }
