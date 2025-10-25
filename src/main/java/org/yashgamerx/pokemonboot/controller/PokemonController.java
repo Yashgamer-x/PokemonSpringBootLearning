@@ -1,5 +1,12 @@
 package org.yashgamerx.pokemonboot.controller;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +22,7 @@ import org.yashgamerx.pokemonboot.service.PokemonService;
 @Slf4j
 @Controller
 @RequestMapping("/pokemon")
+@Tag(name = "Pokemon API", description = "API for managing Pokemon requests")
 public class PokemonController {
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
@@ -27,8 +35,14 @@ public class PokemonController {
         this.pokemonService = pokemonService;
     }
 
+
     @GetMapping("/search")
-    public ResponseEntity<Pokemon> getPokemon(@RequestParam String name) {
+    @Operation(summary = "Get Pokemon by name", description = "Retrieves a Pokemon's details based on their unique name.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successfully retrieved Pokemon"),
+            @ApiResponse(responseCode = "404", description = "Pokemon not found")
+    })
+    public ResponseEntity<Pokemon> getPokemon(@Parameter(description = "Name of the Pokemon to retrieve", required = true) @RequestParam String name) {
         var pokemonOptional = pokemonService.findPokemonByName(name);
         Pokemon pokemon;
         if (pokemonOptional.isPresent()) {
