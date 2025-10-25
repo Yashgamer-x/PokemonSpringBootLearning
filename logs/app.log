@@ -1706,3 +1706,747 @@ Caused by: java.lang.ClassNotFoundException: org.yashgamerx.pokemonboot.dao.Poke
 2025-10-24T21:35:51.546-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
 2025-10-24T21:35:51.613-04:00 ERROR 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.p.controller.PokemonController       : Pokemon not found Request made by username: 
 2025-10-24T21:35:51.614-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T21:40:03.786-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-5] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T21:40:03.788-04:00 ERROR 1036 --- [PokemonBoot] [http-nio-8080-exec-5] o.y.p.controller.PokemonController       : Pokemon not found Request made by username: 
+2025-10-24T21:40:03.788-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-5] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T21:40:07.576-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T21:40:07.578-04:00 ERROR 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.p.controller.PokemonController       : Pokemon not found Request made by username: 
+2025-10-24T21:40:07.578-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T21:40:31.373-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-8] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T21:40:31.385-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-8] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T21:40:31.385-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-8] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T21:40:36.212-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-9] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T21:40:36.215-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-9] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T21:40:36.215-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-9] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T21:44:39.307-04:00  INFO 1036 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-24T21:44:39.310-04:00  INFO 1036 --- [PokemonBoot] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T21:44:39.314-04:00  INFO 1036 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T21:44:39.315-04:00  INFO 1036 --- [PokemonBoot] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:44:39.316-04:00  INFO 1036 --- [PokemonBoot] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-10-24T21:44:39.318-04:00  INFO 1036 --- [PokemonBoot] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-10-24T21:44:39.382-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 1036 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T21:44:39.382-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T21:44:39.484-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T21:44:39.490-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-10-24T21:44:39.553-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T21:44:39.554-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T21:44:39.554-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T21:44:39.570-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T21:44:39.571-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2025-10-24T21:44:39.602-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T21:44:39.604-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T21:44:39.609-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T21:44:39.609-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-10-24T21:44:39.623-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e02ccaf
+2025-10-24T21:44:39.623-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-10-24T21:44:39.624-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T21:44:39.624-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T21:44:39.656-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T21:44:39.664-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:44:39.732-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T21:44:39.836-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T21:44:39.845-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T21:44:39.847-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.48 seconds (process running for 795.471)
+2025-10-24T21:44:39.848-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T21:44:41.240-04:00  INFO 1036 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-24T21:44:41.240-04:00  INFO 1036 --- [PokemonBoot] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T21:44:41.244-04:00  INFO 1036 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T21:44:41.245-04:00  INFO 1036 --- [PokemonBoot] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:44:41.247-04:00  INFO 1036 --- [PokemonBoot] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-10-24T21:44:41.248-04:00  INFO 1036 --- [PokemonBoot] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-10-24T21:44:41.307-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 1036 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T21:44:41.307-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T21:44:41.396-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T21:44:41.401-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-10-24T21:44:41.442-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T21:44:41.442-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T21:44:41.442-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T21:44:41.459-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T21:44:41.459-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 151 ms
+2025-10-24T21:44:41.477-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T21:44:41.478-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T21:44:41.482-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T21:44:41.483-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-10-24T21:44:41.495-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71362b8f
+2025-10-24T21:44:41.495-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-10-24T21:44:41.496-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T21:44:41.496-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T21:44:41.525-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T21:44:41.534-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:44:41.584-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T21:44:41.649-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T21:44:41.658-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T21:44:41.661-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.366 seconds (process running for 797.285)
+2025-10-24T21:44:41.661-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T21:45:39.212-04:00  INFO 1036 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (1 addition, 1 deletion, 1 modification)
+2025-10-24T21:45:39.213-04:00  INFO 1036 --- [PokemonBoot] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T21:45:39.218-04:00  INFO 1036 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T21:45:39.219-04:00  INFO 1036 --- [PokemonBoot] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:45:39.220-04:00  INFO 1036 --- [PokemonBoot] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-10-24T21:45:39.222-04:00  INFO 1036 --- [PokemonBoot] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-10-24T21:45:39.286-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 1036 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T21:45:39.286-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T21:45:39.413-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T21:45:39.422-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2025-10-24T21:45:39.475-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T21:45:39.475-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T21:45:39.475-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T21:45:39.493-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T21:45:39.493-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
+2025-10-24T21:45:39.515-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T21:45:39.516-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T21:45:39.520-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T21:45:39.521-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-10-24T21:45:39.531-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4651e01e
+2025-10-24T21:45:39.532-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-10-24T21:45:39.533-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T21:45:39.533-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T21:45:39.560-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T21:45:39.570-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:45:39.633-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T21:45:39.726-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T21:45:39.735-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T21:45:39.737-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.464 seconds (process running for 855.362)
+2025-10-24T21:45:39.738-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T21:46:40.294-04:00  INFO 1036 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2025-10-24T21:46:40.295-04:00  INFO 1036 --- [PokemonBoot] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T21:46:40.300-04:00  INFO 1036 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T21:46:40.301-04:00  INFO 1036 --- [PokemonBoot] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:46:40.301-04:00  INFO 1036 --- [PokemonBoot] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2025-10-24T21:46:40.303-04:00  INFO 1036 --- [PokemonBoot] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2025-10-24T21:46:40.366-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 1036 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T21:46:40.367-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T21:46:40.479-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T21:46:40.485-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-10-24T21:46:40.539-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T21:46:40.540-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T21:46:40.540-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T21:46:40.557-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T21:46:40.557-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2025-10-24T21:46:40.576-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T21:46:40.577-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T21:46:40.582-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T21:46:40.583-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2025-10-24T21:46:40.592-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21713116
+2025-10-24T21:46:40.592-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2025-10-24T21:46:40.594-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T21:46:40.594-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T21:46:40.620-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T21:46:40.628-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T21:46:40.676-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T21:46:40.742-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T21:46:40.750-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T21:46:40.752-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.398 seconds (process running for 916.376)
+2025-10-24T21:46:40.752-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T21:47:23.893-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T21:47:23.893-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T21:47:23.893-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-24T22:00:59.694-04:00  INFO 1036 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-24T22:00:59.695-04:00  INFO 1036 --- [PokemonBoot] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:00:59.700-04:00  INFO 1036 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:00:59.702-04:00  INFO 1036 --- [PokemonBoot] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:00:59.702-04:00  INFO 1036 --- [PokemonBoot] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2025-10-24T22:00:59.704-04:00  INFO 1036 --- [PokemonBoot] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2025-10-24T22:00:59.764-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 1036 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:00:59.764-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:00:59.859-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:00:59.865-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:00:59.923-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:00:59.925-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:00:59.925-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:00:59.941-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:00:59.941-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 175 ms
+2025-10-24T22:00:59.966-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:00:59.967-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:00:59.971-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:00:59.973-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2025-10-24T22:00:59.984-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c76d0ff
+2025-10-24T22:00:59.985-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2025-10-24T22:00:59.985-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:00:59.986-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:01:00.011-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:01:00.020-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:01:00.077-04:00  WARN 1036 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:01:00.161-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:01:00.168-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:01:00.170-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.42 seconds (process running for 1775.795)
+2025-10-24T22:01:00.171-04:00  INFO 1036 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:01:05.605-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:01:05.605-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:01:05.605-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-24T22:02:09.696-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-4] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:02:09.698-04:00 ERROR 1036 --- [PokemonBoot] [http-nio-8080-exec-4] o.y.p.controller.PokemonController       : Pokemon not found Request made by username: 
+2025-10-24T22:02:09.700-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-4] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:04:20.619-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:04:20.623-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:04:20.624-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-7] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:04:28.259-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-9] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:04:28.262-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-9] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:04:28.262-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-9] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:04:49.691-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-10] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:04:49.695-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-10] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:04:49.695-04:00  INFO 1036 --- [PokemonBoot] [http-nio-8080-exec-10] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:04:49.697-04:00  WARN 1036 --- [PokemonBoot] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
+2025-10-24T22:04:49.699-04:00  WARN 1036 --- [PokemonBoot] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
+2025-10-24T22:06:44.008-04:00  INFO 1036 --- [PokemonBoot] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:06:44.012-04:00  INFO 1036 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:06:44.013-04:00  INFO 1036 --- [PokemonBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:06:44.013-04:00  INFO 1036 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2025-10-24T22:06:44.015-04:00  INFO 1036 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2025-10-24T22:06:46.797-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:06:46.798-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:06:46.833-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-24T22:06:46.833-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-24T22:06:47.237-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:06:47.269-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:06:47.569-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:06:47.578-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:06:47.578-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:06:47.611-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:06:47.612-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 777 ms
+2025-10-24T22:06:47.693-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:06:47.727-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-24T22:06:47.746-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:06:47.922-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:06:47.939-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-24T22:06:48.152-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@718a3361
+2025-10-24T22:06:48.153-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-24T22:06:48.182-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:06:48.191-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:06:48.680-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:06:48.716-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:06:48.986-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:06:49.225-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:06:49.249-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:06:49.254-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 2.714 seconds (process running for 3.142)
+2025-10-24T22:06:52.086-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:06:52.087-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:06:52.087-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-24T22:06:52.109-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:06:52.189-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:06:52.191-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:06:52.195-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.yashgamerx.pokemonboot.dao.Pokemon] with preset Content-Type 'null']
+2025-10-24T22:06:52.207-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
+2025-10-24T22:07:41.786-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-24T22:07:41.789-04:00  INFO 21748 --- [PokemonBoot] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:07:41.794-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:07:41.796-04:00  INFO 21748 --- [PokemonBoot] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:07:41.798-04:00  INFO 21748 --- [PokemonBoot] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-24T22:07:41.802-04:00  INFO 21748 --- [PokemonBoot] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-24T22:07:41.885-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:07:41.885-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:07:41.997-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:07:42.004-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:07:42.054-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:07:42.055-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:07:42.055-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:07:42.075-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:07:42.075-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2025-10-24T22:07:42.096-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:07:42.097-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:07:42.102-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:07:42.102-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-24T22:07:42.114-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@736a545b
+2025-10-24T22:07:42.114-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-24T22:07:42.115-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:07:42.115-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:07:42.146-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:07:42.156-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:07:42.222-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:07:42.302-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:07:42.310-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:07:42.312-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.444 seconds (process running for 56.201)
+2025-10-24T22:07:42.314-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:08:29.855-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 15 class path changes (0 additions, 14 deletions, 1 modification)
+2025-10-24T22:08:29.855-04:00  INFO 21748 --- [PokemonBoot] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:08:29.861-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:08:29.862-04:00  INFO 21748 --- [PokemonBoot] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:08:29.863-04:00  INFO 21748 --- [PokemonBoot] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-24T22:08:29.866-04:00  INFO 21748 --- [PokemonBoot] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-24T22:08:29.926-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:08:29.927-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:08:30.028-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:08:30.029-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2025-10-24T22:08:30.083-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:08:30.084-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:08:30.084-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:08:30.108-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:08:30.108-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 181 ms
+2025-10-24T22:08:30.128-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:08:30.129-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:08:30.135-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:08:30.137-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-24T22:08:30.152-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ef1e4ff
+2025-10-24T22:08:30.152-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-24T22:08:30.153-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:08:30.153-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:08:30.165-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:08:30.165-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:08:30.190-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:08:30.301-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:08:30.311-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:08:30.315-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.405 seconds (process running for 104.204)
+2025-10-24T22:08:30.316-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:08:31.708-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 14 class path changes (14 additions, 0 deletions, 0 modifications)
+2025-10-24T22:08:31.708-04:00  INFO 21748 --- [PokemonBoot] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:08:31.713-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:08:31.714-04:00  INFO 21748 --- [PokemonBoot] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:08:31.715-04:00  INFO 21748 --- [PokemonBoot] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-24T22:08:31.717-04:00  INFO 21748 --- [PokemonBoot] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-10-24T22:08:31.780-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:08:31.780-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:08:31.873-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:08:31.879-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:08:31.920-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:08:31.921-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:08:31.921-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:08:31.935-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:08:31.935-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 154 ms
+2025-10-24T22:08:31.953-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:08:31.955-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:08:31.959-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:08:31.960-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-10-24T22:08:31.969-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@399f2b90
+2025-10-24T22:08:31.969-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-10-24T22:08:31.970-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:08:31.970-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:08:32.006-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:08:32.016-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:08:32.073-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:08:32.136-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:08:32.143-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:08:32.145-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.378 seconds (process running for 106.033)
+2025-10-24T22:08:32.145-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:08:33.739-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:08:33.739-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:08:33.740-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-24T22:08:33.742-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:08:33.747-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:08:33.747-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:08:33.747-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.yashgamerx.pokemonboot.dao.Pokemon] with preset Content-Type 'null']
+2025-10-24T22:08:33.749-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
+2025-10-24T22:09:40.162-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-24T22:09:40.163-04:00  INFO 21748 --- [PokemonBoot] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:09:40.167-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:09:40.168-04:00  INFO 21748 --- [PokemonBoot] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:09:40.169-04:00  INFO 21748 --- [PokemonBoot] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-10-24T22:09:40.171-04:00  INFO 21748 --- [PokemonBoot] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-10-24T22:09:40.224-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:09:40.224-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:09:40.313-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:09:40.319-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:09:40.360-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:09:40.360-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:09:40.361-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:09:40.375-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:09:40.375-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 150 ms
+2025-10-24T22:09:40.395-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:09:40.396-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:09:40.401-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:09:40.401-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-10-24T22:09:40.411-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@515baf84
+2025-10-24T22:09:40.412-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-10-24T22:09:40.412-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:09:40.412-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:09:40.442-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:09:40.453-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:09:40.517-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:09:40.583-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:09:40.591-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:09:40.593-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.382 seconds (process running for 174.481)
+2025-10-24T22:09:40.593-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:10:35.149-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-24T22:10:35.150-04:00  INFO 21748 --- [PokemonBoot] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:10:35.154-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:10:35.155-04:00  INFO 21748 --- [PokemonBoot] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:10:35.157-04:00  INFO 21748 --- [PokemonBoot] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-10-24T22:10:35.159-04:00  INFO 21748 --- [PokemonBoot] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-10-24T22:10:35.223-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:10:35.223-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:10:35.333-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:10:35.340-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:10:35.407-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:10:35.408-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:10:35.408-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:10:35.432-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:10:35.432-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 208 ms
+2025-10-24T22:10:35.457-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:10:35.458-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:10:35.464-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:10:35.464-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-10-24T22:10:35.478-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3afdaa86
+2025-10-24T22:10:35.478-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-10-24T22:10:35.479-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:10:35.479-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:10:35.508-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:10:35.520-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:10:35.612-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:10:35.732-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:10:35.741-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:10:35.743-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.534 seconds (process running for 229.632)
+2025-10-24T22:10:35.744-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:10:37.136-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-24T22:10:37.137-04:00  INFO 21748 --- [PokemonBoot] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:10:37.141-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:10:37.142-04:00  INFO 21748 --- [PokemonBoot] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:10:37.142-04:00  INFO 21748 --- [PokemonBoot] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-10-24T22:10:37.144-04:00  INFO 21748 --- [PokemonBoot] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-10-24T22:10:37.194-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:10:37.194-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:10:37.283-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:10:37.287-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:10:37.328-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:10:37.328-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:10:37.328-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:10:37.342-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:10:37.342-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 147 ms
+2025-10-24T22:10:37.362-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:10:37.363-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:10:37.367-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:10:37.367-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-10-24T22:10:37.378-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4490c20e
+2025-10-24T22:10:37.379-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-10-24T22:10:37.379-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:10:37.379-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:10:37.405-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:10:37.414-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:10:37.471-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:10:37.537-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:10:37.544-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:10:37.545-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.362 seconds (process running for 231.434)
+2025-10-24T22:10:37.546-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:10:45.257-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:10:45.257-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:10:45.258-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-24T22:10:45.260-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:10:45.263-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:10:45.263-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:10:45.264-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.yashgamerx.pokemonboot.dao.Pokemon] with preset Content-Type 'null']
+2025-10-24T22:10:45.267-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
+2025-10-24T22:11:09.429-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-24T22:11:09.429-04:00  INFO 21748 --- [PokemonBoot] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:11:09.433-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:11:09.434-04:00  INFO 21748 --- [PokemonBoot] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:11:09.434-04:00  INFO 21748 --- [PokemonBoot] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-10-24T22:11:09.436-04:00  INFO 21748 --- [PokemonBoot] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-10-24T22:11:09.490-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:11:09.490-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:11:09.581-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:11:09.586-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:11:09.626-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:11:09.627-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:11:09.627-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:11:09.641-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:11:09.642-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 151 ms
+2025-10-24T22:11:09.661-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:11:09.662-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:11:09.666-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:11:09.666-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-10-24T22:11:09.677-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3548516f
+2025-10-24T22:11:09.677-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-10-24T22:11:09.677-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:11:09.678-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:11:09.763-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:11:09.828-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:11:09.879-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:11:09.944-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:11:09.951-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:11:09.953-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.474 seconds (process running for 263.841)
+2025-10-24T22:11:09.953-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:12:00.489-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-10-24T22:12:00.490-04:00  INFO 21748 --- [PokemonBoot] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:12:00.494-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:12:00.496-04:00  INFO 21748 --- [PokemonBoot] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:12:00.496-04:00  INFO 21748 --- [PokemonBoot] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2025-10-24T22:12:00.498-04:00  INFO 21748 --- [PokemonBoot] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2025-10-24T22:12:00.557-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:12:00.558-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:12:00.651-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:12:00.658-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:12:00.702-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:12:00.703-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:12:00.703-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:12:00.719-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:12:00.719-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 160 ms
+2025-10-24T22:12:00.738-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:12:00.739-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:12:00.743-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:12:00.743-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2025-10-24T22:12:00.755-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a352613
+2025-10-24T22:12:00.755-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2025-10-24T22:12:00.755-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:12:00.756-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:12:00.781-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:12:00.796-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:12:00.862-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:12:00.932-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:12:00.939-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:12:00.941-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.397 seconds (process running for 314.83)
+2025-10-24T22:12:00.942-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:12:02.338-04:00  INFO 21748 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-10-24T22:12:02.339-04:00  INFO 21748 --- [PokemonBoot] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:12:02.343-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:12:02.344-04:00  INFO 21748 --- [PokemonBoot] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:12:02.345-04:00  INFO 21748 --- [PokemonBoot] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2025-10-24T22:12:02.347-04:00  INFO 21748 --- [PokemonBoot] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2025-10-24T22:12:02.398-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 21748 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:12:02.398-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:12:02.487-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:12:02.491-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:12:02.532-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:12:02.532-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:12:02.532-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:12:02.546-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:12:02.546-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 147 ms
+2025-10-24T22:12:02.564-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:12:02.565-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:12:02.569-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:12:02.570-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2025-10-24T22:12:02.580-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@595c840a
+2025-10-24T22:12:02.580-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2025-10-24T22:12:02.581-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:12:02.581-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:12:02.606-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:12:02.617-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:12:02.677-04:00  WARN 21748 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:12:02.737-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:12:02.744-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:12:02.745-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.358 seconds (process running for 316.634)
+2025-10-24T22:12:02.746-04:00  INFO 21748 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:12:05.119-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:12:05.119-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:12:05.120-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-24T22:12:05.122-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:12:05.132-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:12:05.132-04:00  INFO 21748 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:12:05.133-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.yashgamerx.pokemonboot.dao.Pokemon] with preset Content-Type 'null']
+2025-10-24T22:12:05.136-04:00  WARN 21748 --- [PokemonBoot] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
+2025-10-24T22:14:10.930-04:00  INFO 21748 --- [PokemonBoot] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:14:10.934-04:00  INFO 21748 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:14:10.936-04:00  INFO 21748 --- [PokemonBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:14:10.936-04:00  INFO 21748 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2025-10-24T22:14:10.940-04:00  INFO 21748 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2025-10-24T22:14:13.826-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 24112 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:14:13.827-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:14:13.861-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-24T22:14:13.861-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-24T22:14:14.272-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:14:14.303-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:14:14.608-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:14:14.617-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:14:14.617-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:14:14.647-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:14:14.648-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 787 ms
+2025-10-24T22:14:14.737-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:14:14.765-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-24T22:14:14.783-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:14:14.940-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:14:14.957-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-24T22:14:15.169-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13fb2ce9
+2025-10-24T22:14:15.170-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-24T22:14:15.199-04:00  WARN 24112 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:14:15.210-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:14:15.721-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:14:15.757-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:14:16.027-04:00  WARN 24112 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:14:16.273-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:14:16.294-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:14:16.300-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 2.73 seconds (process running for 3.171)
+2025-10-24T22:14:18.355-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:14:18.355-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:14:18.356-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-24T22:14:18.378-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Started called: getPokemon()
+2025-10-24T22:14:18.456-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.p.controller.PokemonController       : Pokemon found with name Gengar
+2025-10-24T22:14:18.459-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.y.pokemonboot.aspect.PokemonAspect     : Method Ended called: getPokemon()
+2025-10-24T22:22:30.190-04:00  INFO 24112 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-24T22:22:30.192-04:00  INFO 24112 --- [PokemonBoot] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:22:30.200-04:00  INFO 24112 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:22:30.203-04:00  INFO 24112 --- [PokemonBoot] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:22:30.206-04:00  INFO 24112 --- [PokemonBoot] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-24T22:22:30.212-04:00  INFO 24112 --- [PokemonBoot] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-24T22:22:30.288-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 24112 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:22:30.288-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:22:30.411-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:22:30.419-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:22:30.473-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:22:30.473-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:22:30.473-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:22:30.495-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:22:30.495-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 206 ms
+2025-10-24T22:22:30.520-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:22:30.522-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:22:30.527-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:22:30.528-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-24T22:22:30.540-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bd7e41a
+2025-10-24T22:22:30.540-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-24T22:22:30.541-04:00  WARN 24112 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:22:30.542-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:22:30.581-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:22:30.599-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:22:30.671-04:00  WARN 24112 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:22:30.762-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:22:30.773-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:22:30.777-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.507 seconds (process running for 497.648)
+2025-10-24T22:22:30.778-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:22:30.941-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:22:30.942-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:22:30.942-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-24T22:22:32.169-04:00  INFO 24112 --- [PokemonBoot] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-24T22:22:32.169-04:00  INFO 24112 --- [PokemonBoot] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-24T22:22:32.174-04:00  INFO 24112 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-24T22:22:32.175-04:00  INFO 24112 --- [PokemonBoot] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:22:32.176-04:00  INFO 24112 --- [PokemonBoot] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-24T22:22:32.178-04:00  INFO 24112 --- [PokemonBoot] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-24T22:22:32.242-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 24112 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-24T22:22:32.242-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-24T22:22:32.337-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-24T22:22:32.343-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-10-24T22:22:32.387-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-24T22:22:32.388-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-24T22:22:32.388-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-24T22:22:32.405-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-24T22:22:32.405-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 162 ms
+2025-10-24T22:22:32.423-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-24T22:22:32.425-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-24T22:22:32.430-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-24T22:22:32.430-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-24T22:22:32.440-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7093ad50
+2025-10-24T22:22:32.440-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-24T22:22:32.441-04:00  WARN 24112 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-24T22:22:32.441-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-24T22:22:32.471-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-24T22:22:32.480-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-24T22:22:32.541-04:00  WARN 24112 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-24T22:22:32.612-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-24T22:22:32.620-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-24T22:22:32.621-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 0.393 seconds (process running for 499.492)
+2025-10-24T22:22:32.622-04:00  INFO 24112 --- [PokemonBoot] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-24T22:22:32.697-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-24T22:22:32.697-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-24T22:22:32.698-04:00  INFO 24112 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

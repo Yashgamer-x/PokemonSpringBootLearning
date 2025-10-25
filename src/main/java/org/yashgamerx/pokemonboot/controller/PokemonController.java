@@ -1,9 +1,7 @@
 package org.yashgamerx.pokemonboot.controller;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +15,6 @@ import org.yashgamerx.pokemonboot.service.PokemonService;
 @Slf4j
 @Controller
 @RequestMapping("/pokemon")
-@Tag(name = "Pokemon API", description = "API for managing Pokemon requests")
 public class PokemonController {
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
@@ -44,7 +41,6 @@ public class PokemonController {
         log.info("Pokemon found with name {}",pokemon.getName());
         return ResponseEntity
                 .ok()
-                .contentType(MediaType.APPLICATION_JSON)
                 .body(pokemon);
     }
 

@@ -1,15 +1,11 @@
 package org.yashgamerx.pokemonboot.dao;
 
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
-/**
- * Pokémon class is connected to Pokémon table in Pokémon Database <br>
- **/
 @Entity
 @Getter @Setter
 public class Pokemon {

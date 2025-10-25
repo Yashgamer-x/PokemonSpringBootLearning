@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.1
 info:
   title: Pokemon API
   version: 1.0.0
@@ -66,6 +66,28 @@ components:
           type: array
           items:
             type: string
-            example: FIRE
+            enum:
+              - FIRE
+              - WATER
+              - GRASS
+              - NORMAL
+              - ELECTRIC
+              - FLYING
+              - FIGHTING
+              - POISON
+              - GROUND
+              - PSYCHIC
+              - ROCK
+              - ICE
+              - BUG
+              - DRAGON
+              - GHOST
+              - DARK
+              - STEEL
+              - FAIRY
+              - STELLAR
+          example:
+            - FIRE
+            - DRAGON
         pokemonRegion:
           $ref: '#/components/schemas/PokemonRegion'
