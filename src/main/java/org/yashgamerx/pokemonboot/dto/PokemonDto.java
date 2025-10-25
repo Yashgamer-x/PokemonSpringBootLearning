@@ -12,7 +12,6 @@ import java.util.List;
  **/
 @Getter @Setter
 public class PokemonDto {
-    private Integer id;
     private String name;
     private Integer level;
     private String ability;

@@ -18,7 +18,7 @@ paths:
             type: string
             example: Charizard
       responses:
-        "200":
+        200:
           description: Successfully retrieved Pokemon
           content:
             application/json:
@@ -27,14 +27,57 @@ paths:
               examples:
                 example-1:
                   $ref: '#/components/schemas/Pokemon'
-        "404":
+        404:
           description: Pokemon not found
           content:
             application/json:
-              example:
+              example: null
+  /pokemon/add:
+    post:
+      summary: Adds a new Pokemon
+      description: 'Based on the validity of the region(could be name or id)
+      it will search the region and add it to the mentioned information for the pokemon'
+      requestBody:
+        required: true
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PokemonDto"
+      responses:
+        201:
+          description: Pokemon Created Successfully
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "Charizard was successfully added"
 
 components:
   schemas:
+    PokemonType:
+      type: string
+      description: "Available Pokémon types"
+      enum:
+        - FIRE
+        - WATER
+        - GRASS
+        - NORMAL
+        - ELECTRIC
+        - FLYING
+        - FIGHTING
+        - POISON
+        - GROUND
+        - PSYCHIC
+        - ROCK
+        - ICE
+        - BUG
+        - DRAGON
+        - GHOST
+        - DARK
+        - STEEL
+        - FAIRY
+        - STELLAR
     PokemonRegion:
       type: object
       properties:
@@ -65,29 +108,34 @@ components:
         types:
           type: array
           items:
-            type: string
-            enum:
-              - FIRE
-              - WATER
-              - GRASS
-              - NORMAL
-              - ELECTRIC
-              - FLYING
-              - FIGHTING
-              - POISON
-              - GROUND
-              - PSYCHIC
-              - ROCK
-              - ICE
-              - BUG
-              - DRAGON
-              - GHOST
-              - DARK
-              - STEEL
-              - FAIRY
-              - STELLAR
+            $ref: "#/components/schemas/PokemonType"
           example:
             - FIRE
             - DRAGON
         pokemonRegion:
           $ref: '#/components/schemas/PokemonRegion'
+    PokemonDto:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Charizard
+        level:
+          type: integer
+          example: 10
+        ability:
+          type: string
+          example: Blaze
+        pokemonTypes:
+          type: array
+          items:
+            $ref: "#/components/schemas/PokemonType"
+          example:
+            - FIRE
+            - DRAGON
+        regionName:
+          type: string
+          example: Kanto
+        regionId:
+          type: integer
+          example: 1
