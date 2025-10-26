@@ -3,6 +3,7 @@ package org.yashgamerx.pokemonboot.service;
 import org.springframework.stereotype.Service;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
+import org.yashgamerx.pokemonboot.dto.PokemonRegionDto;
 import org.yashgamerx.pokemonboot.repo.PokemonRegionRepository;
 
 import java.util.Optional;
@@ -16,10 +17,10 @@ public class PokemonRegionService {
     }
 
     public Optional<PokemonRegion> getPokemonRegionByDto(PokemonDto pokemonDto) {
-        if (pokemonDto.getRegionName() != null && !pokemonDto.getRegionName().isEmpty()) {
-            return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.getRegionName());
-        } else if (pokemonDto.getRegionId() != null) {
-            return pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
+        if (pokemonDto.name() != null && !pokemonDto.name().isEmpty()) {
+            return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.name());
+        } else if (pokemonDto.name() != null) {
+            return pokemonRegionRepository.findPokemonRegionById(pokemonDto.regionId());
         }
         return Optional.empty();
     }
@@ -28,13 +29,10 @@ public class PokemonRegionService {
         pokemonRegionRepository.save(pokemonRegion);
     }
 
-    public void validatePokemonRegion(PokemonRegion pokemonRegion) {
-        if(
-                pokemonRegion.getName() == null ||
-                pokemonRegion.getName().isEmpty() ||
-                pokemonRegion.getPopulation() < 1
-        ) {
-            throw new IllegalArgumentException("Region was unable to meet the criteria");
-        }
+    public PokemonRegion convertPokemonRegionDtoToPokemonRegion(PokemonRegionDto pokemonRegionDto) {
+        return PokemonRegion.builder()
+                .name(pokemonRegionDto.name())
+                .population(pokemonRegionDto.population())
+                .build();
     }
 }

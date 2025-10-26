@@ -18,19 +18,19 @@ public class PokemonService {
     }
 
     public Pokemon createPokemon(PokemonDto pokemonDto, PokemonRegion pokemonRegion) {
-        if (pokemonDto.getName() == null || pokemonDto.getName().isBlank()) {
+        if (pokemonDto.name() == null || pokemonDto.name().isBlank()) {
             throw new PokemonException("Pokemon name must not be null or blank");
         }
-        if (pokemonDto.getAbility() == null || pokemonDto.getAbility().isBlank()) {
+        if (pokemonDto.ability() == null || pokemonDto.ability().isBlank()) {
             throw new PokemonException("Pokemon ability must not be null or blank");
         }
-        if (pokemonDto.getLevel() == null || pokemonDto.getLevel() < 1) {
+        if (pokemonDto.level() == null || pokemonDto.level() < 1) {
             throw new PokemonException("Pokemon level must be a positive integer");
         }
         var pokemon = new Pokemon();
-        pokemon.setName(pokemonDto.getName());
-        pokemon.setAbility(pokemonDto.getAbility());
-        pokemon.setLevel(pokemonDto.getLevel());
+        pokemon.setName(pokemonDto.name());
+        pokemon.setAbility(pokemonDto.ability());
+        pokemon.setLevel(pokemonDto.level());
         pokemon.setPokemonRegion(pokemonRegion);
         return pokemon;
     }
@@ -44,14 +44,14 @@ public class PokemonService {
     }
 
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegion) {
-        if(pokemonDto.getAbility() != null && !pokemonDto.getAbility().isEmpty()){
-            pokemon.setAbility(pokemonDto.getAbility());
+        if(pokemonDto.ability() != null && !pokemonDto.ability().isEmpty()){
+            pokemon.setAbility(pokemonDto.ability());
         }
-        if(pokemonDto.getLevel() != null && pokemonDto.getLevel()>0){
-            pokemon.setLevel(pokemonDto.getLevel());
+        if(pokemonDto.level() != null && pokemonDto.level()>0){
+            pokemon.setLevel(pokemonDto.level());
         }
-        if(pokemonDto.getPokemonTypes() != null && !pokemonDto.getPokemonTypes().isEmpty()){
-            pokemon.setTypes(pokemonDto.getPokemonTypes());
+        if(pokemonDto.pokemonTypes() != null && !pokemonDto.pokemonTypes().isEmpty()){
+            pokemon.setTypes(pokemonDto.pokemonTypes());
         }
         pokemonRegion.ifPresent(pokemon::setPokemonRegion);
     }

@@ -61,7 +61,7 @@ public class PokemonController {
 
     @PutMapping("/update")
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
-        var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.getName());
+        var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
         var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon Region"));
         var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
         pokemonService.updatePokemon(pokemonDto, pokemon, pokeRegion);
