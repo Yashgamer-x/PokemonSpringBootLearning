@@ -43,6 +43,10 @@ public class PokemonService {
         return pokemonRepository.findPokemonByName(name);
     }
 
+    public Optional<Pokemon> findPokemonById(Integer id) {
+        return pokemonRepository.findById(id);
+    }
+
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegion) {
         if(pokemonDto.ability() != null && !pokemonDto.ability().isEmpty()){
             pokemon.setAbility(pokemonDto.ability());

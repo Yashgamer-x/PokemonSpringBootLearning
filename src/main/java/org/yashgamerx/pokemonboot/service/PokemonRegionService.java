@@ -29,4 +29,8 @@ public class PokemonRegionService {
                 .population(pokemonRegionDto.population())
                 .build();
     }
+
+    public void updatePokemon(PokemonRegion pokemonRegion, PokemonRegionDto pokemonRegionDto) {
+        pokemonRegion.setPopulation(pokemonRegionDto.population());
+    }
 }

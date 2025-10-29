@@ -289,3 +289,45 @@ org.yashgamerx.pokemonboot.exception.PokemonRegionException: gen
 2025-10-29T13:42:41.248-04:00  INFO 18836 --- [PokemonBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-29T13:42:41.250-04:00  INFO 18836 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-29T13:42:41.255-04:00  INFO 18836 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-29T13:42:43.801-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Starting PokemonBootApplication using Java 25 with PID 25564 (D:\JavaPrograms\PokemonSpringBootLearning\target\classes started by Admin in D:\JavaPrograms\PokemonSpringBootLearning)
+2025-10-29T13:42:43.802-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-29T13:42:43.828-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-29T13:42:43.828-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-29T13:42:44.307-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-29T13:42:44.339-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2025-10-29T13:42:44.674-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-29T13:42:44.684-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-29T13:42:44.685-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29T13:42:44.717-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-29T13:42:44.717-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 889 ms
+2025-10-29T13:42:44.804-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-29T13:42:44.835-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-29T13:42:44.852-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-29T13:42:45.020-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-29T13:42:45.038-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-29T13:42:45.281-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f457d16
+2025-10-29T13:42:45.283-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-29T13:42:45.313-04:00  WARN 25564 --- [PokemonBoot] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-29T13:42:45.323-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-29T13:42:45.867-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-29T13:42:45.910-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29T13:42:46.201-04:00  WARN 25564 --- [PokemonBoot] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-29T13:42:46.435-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-29T13:42:46.457-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-29T13:42:46.463-04:00  INFO 25564 --- [PokemonBoot] [restartedMain] o.y.pokemonboot.PokemonBootApplication   : Started PokemonBootApplication in 2.928 seconds (process running for 3.361)
+2025-10-29T13:42:54.282-04:00  INFO 25564 --- [PokemonBoot] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-29T13:42:54.282-04:00  INFO 25564 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-29T13:42:54.283-04:00  INFO 25564 --- [PokemonBoot] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-29T13:42:54.401-04:00  WARN 25564 --- [PokemonBoot] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.yashgamerx.pokemonboot.exception.PokemonRegionNotFoundException: Pokemon region with name 'gen' was not found.]
+2025-10-29T13:45:59.913-04:00  INFO 25564 --- [PokemonBoot] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29T13:45:59.917-04:00  INFO 25564 --- [PokemonBoot] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-29T13:45:59.919-04:00  INFO 25564 --- [PokemonBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29T13:45:59.921-04:00  INFO 25564 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-29T13:45:59.926-04:00  INFO 25564 --- [PokemonBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

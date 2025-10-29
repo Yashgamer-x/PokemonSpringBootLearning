@@ -34,4 +34,15 @@ public class PokemonRegionController {
         return ResponseEntity.ok(pokemonRegion);
     }
 
+    @PutMapping("/update")
+    public ResponseEntity<PokemonRegion> update(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
+        var pokemonRegionName = pokemonRegionDto.name();
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
+        var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
+                new PokemonRegionNotFoundException(pokemonRegionName)
+        );
+        pokemonRegionService.updatePokemon(pokemonRegion, pokemonRegionDto);
+        return ResponseEntity.ok(pokemonRegion);
+    }
+
 }

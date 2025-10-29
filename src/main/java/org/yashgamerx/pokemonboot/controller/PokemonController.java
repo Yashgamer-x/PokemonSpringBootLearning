@@ -1,13 +1,14 @@
 package org.yashgamerx.pokemonboot.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
 import org.yashgamerx.pokemonboot.exception.PokemonException;
+import org.yashgamerx.pokemonboot.exception.PokemonIdNotFoundException;
+import org.yashgamerx.pokemonboot.exception.PokemonNameNotFoundException;
 import org.yashgamerx.pokemonboot.exception.PokemonRegionException;
 import org.yashgamerx.pokemonboot.service.PokemonRegionService;
 import org.yashgamerx.pokemonboot.service.PokemonService;
@@ -29,15 +30,24 @@ public class PokemonController {
 
 
     @GetMapping("/search")
-    public ResponseEntity<Pokemon> getPokemon(@RequestParam String name) {
+    public ResponseEntity<Pokemon> getPokemonByName(@RequestParam String name) {
         var pokemonOptional = pokemonService.findPokemonByName(name);
-        Pokemon pokemon;
-        if (pokemonOptional.isPresent()) {
-            pokemon = pokemonOptional.get();
-        }else{
-            log.error("Pokemon not found"+" Request made by username: ");
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        var pokemon = pokemonOptional.orElseThrow(()->
+                new PokemonNameNotFoundException(name)
+        );
+        log.info("Pokemon found with name {}",pokemon.getName());
+        return ResponseEntity
+                .ok()
+                .body(pokemon);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Pokemon> getPokemonById(@PathVariable String id) {
+        var pokemonId = Integer.parseInt(id);
+        var pokemonOptional = pokemonService.findPokemonById(pokemonId);
+        var pokemon = pokemonOptional.orElseThrow(()->
+                new PokemonIdNotFoundException(id)
+        );
         log.info("Pokemon found with name {}",pokemon.getName());
         return ResponseEntity
                 .ok()
