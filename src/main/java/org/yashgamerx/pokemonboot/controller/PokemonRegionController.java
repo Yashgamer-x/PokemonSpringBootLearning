@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonRegionDto;
+import org.yashgamerx.pokemonboot.exception.PokemonRegionNotFoundException;
 import org.yashgamerx.pokemonboot.service.PokemonRegionService;
 
 @RestController
@@ -23,4 +24,14 @@ public class PokemonRegionController {
         return ResponseEntity.ok()
                 .body(pokemonRegion);
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<PokemonRegion> getPokemonRegion(@RequestParam String name) {
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
+        var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
+                new PokemonRegionNotFoundException(name)
+        );
+        return ResponseEntity.ok(pokemonRegion);
+    }
+
 }

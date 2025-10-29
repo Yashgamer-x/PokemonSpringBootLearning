@@ -1,9 +1,13 @@
 package org.yashgamerx.pokemonboot.advice;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
+import org.yashgamerx.pokemonboot.exception.PokemonRegionNotFoundException;
+import org.yashgamerx.pokemonboot.reponse.ApiError;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,5 +21,11 @@ public class GlobalExceptionHandler {
                 errors.put(error.getField(), error.getDefaultMessage())
         );
         return ResponseEntity.badRequest().body(errors);
+    }
+
+    @ExceptionHandler(PokemonRegionNotFoundException.class)
+    public ResponseEntity<Object> handlePokemonRegionNotFound(HttpClientErrorException.NotFound ex) {
+        var body = new ApiError(HttpStatus.NOT_FOUND,  ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
     }
 }

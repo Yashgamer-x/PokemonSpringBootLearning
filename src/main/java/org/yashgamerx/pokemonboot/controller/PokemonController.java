@@ -47,7 +47,8 @@ public class PokemonController {
 
     @PostMapping("/add")
     public @ResponseBody String addPokemon(@RequestBody PokemonDto pokemonDto) {
-        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
+        var pokemonRegionName = pokemonDto.regionName();
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->{
             log.error("Pokemon region not found");
             return new PokemonRegionException("Unable to find Pokemon Region");
@@ -63,8 +64,9 @@ public class PokemonController {
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
         var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
         var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon Region"));
-        var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
-        pokemonService.updatePokemon(pokemonDto, pokemon, pokeRegion);
+        var pokemonRegionName = pokemonDto.regionName();
+        var pokemonRegion = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
+        pokemonService.updatePokemon(pokemonDto, pokemon, pokemonRegion);
         pokemonService.savePokemon(pokemon);
         return pokemon.getName()+" was updated successfully";
     }

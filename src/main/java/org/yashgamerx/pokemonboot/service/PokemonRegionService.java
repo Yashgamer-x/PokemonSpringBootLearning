@@ -2,7 +2,6 @@ package org.yashgamerx.pokemonboot.service;
 
 import org.springframework.stereotype.Service;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
-import org.yashgamerx.pokemonboot.dto.PokemonDto;
 import org.yashgamerx.pokemonboot.dto.PokemonRegionDto;
 import org.yashgamerx.pokemonboot.repo.PokemonRegionRepository;
 
@@ -16,8 +15,8 @@ public class PokemonRegionService {
         this.pokemonRegionRepository = pokemonRegionRepository;
     }
 
-    public Optional<PokemonRegion> getPokemonRegionByDto(PokemonDto pokemonDto) {
-        return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.name());
+    public Optional<PokemonRegion> getPokemonRegionByName(String name) {
+        return pokemonRegionRepository.findPokemonRegionByName(name);
     }
 
     public void savePokemonRegion(PokemonRegion pokemonRegion) {
