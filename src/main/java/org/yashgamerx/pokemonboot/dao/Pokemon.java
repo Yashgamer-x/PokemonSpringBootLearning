@@ -1,13 +1,13 @@
 package org.yashgamerx.pokemonboot.dao;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor @AllArgsConstructor @Builder
 public class Pokemon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

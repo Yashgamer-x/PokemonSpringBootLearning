@@ -17,12 +17,7 @@ public class PokemonRegionService {
     }
 
     public Optional<PokemonRegion> getPokemonRegionByDto(PokemonDto pokemonDto) {
-        if (pokemonDto.name() != null && !pokemonDto.name().isEmpty()) {
-            return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.name());
-        } else if (pokemonDto.name() != null) {
-            return pokemonRegionRepository.findPokemonRegionById(pokemonDto.regionId());
-        }
-        return Optional.empty();
+        return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.name());
     }
 
     public void savePokemonRegion(PokemonRegion pokemonRegion) {
