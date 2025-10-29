@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
-import org.yashgamerx.pokemonboot.exception.PokemonException;
+import org.yashgamerx.pokemonboot.exception.PokemonNotFoundException;
 import org.yashgamerx.pokemonboot.exception.PokemonIdNotFoundException;
 import org.yashgamerx.pokemonboot.exception.PokemonNameNotFoundException;
 import org.yashgamerx.pokemonboot.exception.PokemonRegionException;
@@ -72,8 +72,9 @@ public class PokemonController {
 
     @PutMapping("/update")
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
-        var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
-        var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon Region"));
+        var pokemonName = pokemonDto.regionName();
+        var pokemonOptional = pokemonService.findPokemonByName(pokemonName);
+        var pokemon = pokemonOptional.orElseThrow(()->new PokemonNotFoundException("Unable to find Pokemon Region"));
         var pokemonRegionName = pokemonDto.regionName();
         var pokemonRegion = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         pokemonService.updatePokemon(pokemonDto, pokemon, pokemonRegion);
@@ -84,7 +85,7 @@ public class PokemonController {
     @DeleteMapping("/delete")
     public @ResponseBody String deletePokemon(@RequestParam String name){
         var pokemonOptional = pokemonService.findPokemonByName(name);
-        var pokemon = pokemonOptional.orElseThrow(()->new PokemonException("Unable to find Pokemon"));
+        var pokemon = pokemonOptional.orElseThrow(()->new PokemonNotFoundException("Unable to find Pokemon"));
         pokemonService.deletePokemonById(pokemon.getId());
         return pokemon.getName()+" was removed successfully";
     }

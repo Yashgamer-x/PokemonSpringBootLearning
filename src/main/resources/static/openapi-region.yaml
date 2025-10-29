@@ -8,4 +8,28 @@ info:
     name: Yash Desai
 
 
+paths:
+  /region/add:
+    post:
+      summary: API to add new Pokemon Region
+      description: 'The API requires the client to add a new Pokemon Region
+      using name and population'
+      requestBody:
+        required: true
+        summary: PokemonRegionDTO format
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PokemonRegionDTO"
 
+components:
+  schemas:
+    PokemonRegionDTO:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Kanto
+        population:
+          type: integer
+          example: 100

@@ -1,9 +1,6 @@
 package org.yashgamerx.pokemonboot.dto;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.*;
 import org.yashgamerx.pokemonboot.dao.PokemonType;
 import java.util.List;
 

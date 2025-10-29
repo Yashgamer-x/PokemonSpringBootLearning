@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
-import org.yashgamerx.pokemonboot.exception.PokemonException;
 import org.yashgamerx.pokemonboot.repo.PokemonRepository;
 
 import java.util.Optional;
@@ -18,21 +17,13 @@ public class PokemonService {
     }
 
     public Pokemon createPokemon(PokemonDto pokemonDto, PokemonRegion pokemonRegion) {
-        if (pokemonDto.name() == null || pokemonDto.name().isBlank()) {
-            throw new PokemonException("Pokemon name must not be null or blank");
-        }
-        if (pokemonDto.ability() == null || pokemonDto.ability().isBlank()) {
-            throw new PokemonException("Pokemon ability must not be null or blank");
-        }
-        if (pokemonDto.level() == null || pokemonDto.level() < 1) {
-            throw new PokemonException("Pokemon level must be a positive integer");
-        }
-        var pokemon = new Pokemon();
-        pokemon.setName(pokemonDto.name());
-        pokemon.setAbility(pokemonDto.ability());
-        pokemon.setLevel(pokemonDto.level());
-        pokemon.setPokemonRegion(pokemonRegion);
-        return pokemon;
+        return Pokemon.builder()
+                .name(pokemonDto.name())
+                .ability(pokemonDto.ability())
+                .level(pokemonDto.level())
+                .types(pokemonDto.pokemonTypes())
+                .pokemonRegion(pokemonRegion)
+                .build();
     }
 
     public void savePokemon(Pokemon pokemon) {
