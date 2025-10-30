@@ -1,8 +1,8 @@
 package org.yashgamerx.pokemonboot.controller;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
@@ -14,7 +14,7 @@ import org.yashgamerx.pokemonboot.service.PokemonRegionService;
 import org.yashgamerx.pokemonboot.service.PokemonService;
 
 @Slf4j
-@Controller
+@RestController
 @RequestMapping("/pokemon")
 public class PokemonController {
     private final PokemonRegionService pokemonRegionService;
@@ -56,7 +56,7 @@ public class PokemonController {
 
 
     @PostMapping("/add")
-    public @ResponseBody String addPokemon(@RequestBody PokemonDto pokemonDto) {
+    public String addPokemon(@RequestBody PokemonDto pokemonDto) {
         var pokemonRegionName = pokemonDto.regionName();
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->{
@@ -71,8 +71,8 @@ public class PokemonController {
 
 
     @PutMapping("/update")
-    public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto){
-        var pokemonName = pokemonDto.regionName();
+    public String updatePokemon(@Valid @RequestBody PokemonDto pokemonDto){
+        var pokemonName = pokemonDto.name();
         var pokemonOptional = pokemonService.findPokemonByName(pokemonName);
         var pokemon = pokemonOptional.orElseThrow(()->new PokemonNotFoundException("Unable to find Pokemon Region"));
         var pokemonRegionName = pokemonDto.regionName();
@@ -83,7 +83,7 @@ public class PokemonController {
     }
 
     @DeleteMapping("/delete")
-    public @ResponseBody String deletePokemon(@RequestParam String name){
+    public String deletePokemon(@RequestParam String name){
         var pokemonOptional = pokemonService.findPokemonByName(name);
         var pokemon = pokemonOptional.orElseThrow(()->new PokemonNotFoundException("Unable to find Pokemon"));
         pokemonService.deletePokemonById(pokemon.getId());
