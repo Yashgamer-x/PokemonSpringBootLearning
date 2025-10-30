@@ -1,19 +1,21 @@
 package org.yashgamerx.pokemonboot.dto;
 
 import jakarta.validation.constraints.*;
+import lombok.Builder;
 import org.yashgamerx.pokemonboot.dao.PokemonType;
 import java.util.List;
 
 
+@Builder
 public record PokemonDto(
-        @NotNull @NotBlank
+        @NotBlank
         String name,
         @NotNull @Min(value = 5)
         Integer level,
-        @NotNull @NotBlank
+        @NotBlank
         String ability,
-        @NotNull.List(value = {}) @NotEmpty.List(value = {})
+        @NotEmpty
         List<PokemonType> pokemonTypes,
-        @NotNull @NotBlank
+        @NotBlank
         String regionName
 ) { }

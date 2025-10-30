@@ -1,5 +1,6 @@
 package org.yashgamerx.pokemonboot.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
@@ -9,12 +10,9 @@ import org.yashgamerx.pokemonboot.repo.PokemonRepository;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class PokemonService {
     private final PokemonRepository pokemonRepository;
-
-    public PokemonService(PokemonRepository pokemonRepository) {
-        this.pokemonRepository = pokemonRepository;
-    }
 
     public Pokemon createPokemon(PokemonDto pokemonDto, PokemonRegion pokemonRegion) {
         return Pokemon.builder()
@@ -49,6 +47,16 @@ public class PokemonService {
             pokemon.setTypes(pokemonDto.pokemonTypes());
         }
         pokemonRegion.ifPresent(pokemon::setPokemonRegion);
+    }
+
+    public PokemonDto mapPokemonToDto(Pokemon pokemon) {
+        return PokemonDto.builder()
+                .name(pokemon.getName())
+                .level(pokemon.getLevel())
+                .ability(pokemon.getAbility())
+                .pokemonTypes(pokemon.getTypes())
+                .regionName(pokemon.getPokemonRegion().getName())
+                .build();
     }
 
     public void deletePokemonById(Integer id) {

@@ -1,7 +1,9 @@
 package org.yashgamerx.pokemonboot.controller;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
@@ -15,19 +17,11 @@ import org.yashgamerx.pokemonboot.service.PokemonService;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/pokemon")
 public class PokemonController {
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
-
-    public PokemonController(
-            PokemonRegionService pokemonRegionService,
-            PokemonService pokemonService
-    ) {
-        this.pokemonRegionService = pokemonRegionService;
-        this.pokemonService = pokemonService;
-    }
-
 
     @GetMapping("/search")
     public ResponseEntity<Pokemon> getPokemonByName(@RequestParam String name) {
@@ -42,21 +36,22 @@ public class PokemonController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pokemon> getPokemonById(@PathVariable String id) {
+    public ResponseEntity<PokemonDto> getPokemonById(@PathVariable String id) {
         var pokemonId = Integer.parseInt(id);
         var pokemonOptional = pokemonService.findPokemonById(pokemonId);
         var pokemon = pokemonOptional.orElseThrow(()->
                 new PokemonIdNotFoundException(id)
         );
-        log.info("Pokemon found with name {}",pokemon.getName());
+        var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
+        log.info("Pokemon found with id {}",pokemonDto.name());
         return ResponseEntity
                 .ok()
-                .body(pokemon);
+                .body(pokemonDto);
     }
 
 
     @PostMapping("/add")
-    public String addPokemon(@RequestBody PokemonDto pokemonDto) {
+    public ResponseEntity<PokemonDto> addPokemon(@Valid @RequestBody PokemonDto pokemonDto) {
         var pokemonRegionName = pokemonDto.regionName();
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->{
@@ -66,7 +61,8 @@ public class PokemonController {
         var pokemon = pokemonService.createPokemon(pokemonDto, pokemonRegion);
         pokemonService.savePokemon(pokemon);
         log.info("Pokemon Added Successfully");
-        return pokemon.getName()+" was added successfully to "+pokemonRegion.getName()+" Region";
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(pokemonDto);
     }
 
 
