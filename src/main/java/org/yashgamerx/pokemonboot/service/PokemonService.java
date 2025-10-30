@@ -2,6 +2,7 @@ package org.yashgamerx.pokemonboot.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
@@ -24,26 +25,29 @@ public class PokemonService {
                 .build();
     }
 
+    @Transactional
     public void savePokemon(Pokemon pokemon) {
         pokemonRepository.save(pokemon);
     }
 
+    @Transactional(readOnly = true)
     public Optional<Pokemon> findPokemonByName(String name) {
         return pokemonRepository.findPokemonByName(name);
     }
 
+    @Transactional(readOnly = true)
     public Optional<Pokemon> findPokemonById(Integer id) {
         return pokemonRepository.findById(id);
     }
 
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegion) {
-        if(pokemonDto.ability() != null && !pokemonDto.ability().isEmpty()){
+        if(!pokemonDto.ability().equals(pokemon.getAbility())){
             pokemon.setAbility(pokemonDto.ability());
         }
-        if(pokemonDto.level() != null && pokemonDto.level()>0){
+        if(!pokemonDto.level().equals(pokemon.getLevel())){
             pokemon.setLevel(pokemonDto.level());
         }
-        if(pokemonDto.pokemonTypes() != null && !pokemonDto.pokemonTypes().isEmpty()){
+        if(!pokemonDto.pokemonTypes().equals(pokemon.getTypes())){
             pokemon.setTypes(pokemonDto.pokemonTypes());
         }
         pokemonRegion.ifPresent(pokemon::setPokemonRegion);
@@ -59,6 +63,7 @@ public class PokemonService {
                 .build();
     }
 
+    @Transactional
     public void deletePokemonById(Integer id) {
         pokemonRepository.deleteById(id);
     }
