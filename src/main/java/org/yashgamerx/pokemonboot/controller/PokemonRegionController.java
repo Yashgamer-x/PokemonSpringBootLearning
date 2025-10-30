@@ -18,20 +18,21 @@ public class PokemonRegionController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<PokemonRegion> add(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
+    public ResponseEntity<PokemonRegionDto> add(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
         var pokemonRegion = pokemonRegionService.convertPokemonRegionDtoToPokemonRegion(pokemonRegionDto);
         pokemonRegionService.savePokemonRegion(pokemonRegion);
         return ResponseEntity.ok()
-                .body(pokemonRegion);
+                .body(pokemonRegionDto);
     }
 
     @GetMapping("/search")
-    public ResponseEntity<PokemonRegion> getPokemonRegion(@RequestParam String name) {
+    public ResponseEntity<PokemonRegionDto> getPokemonRegion(@RequestParam String name) {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
                 new PokemonRegionNotFoundException(name)
         );
-        return ResponseEntity.ok(pokemonRegion);
+        var pokemonRegionDto = pokemonRegionService.mapPokemonRegionToDto(pokemonRegion);
+        return ResponseEntity.ok(pokemonRegionDto);
     }
 
     @PutMapping("/update")

@@ -8,10 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dao.Pokemon;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
-import org.yashgamerx.pokemonboot.exception.PokemonNotFoundException;
-import org.yashgamerx.pokemonboot.exception.PokemonIdNotFoundException;
-import org.yashgamerx.pokemonboot.exception.PokemonNameNotFoundException;
-import org.yashgamerx.pokemonboot.exception.PokemonRegionException;
+import org.yashgamerx.pokemonboot.exception.*;
 import org.yashgamerx.pokemonboot.service.PokemonRegionService;
 import org.yashgamerx.pokemonboot.service.PokemonService;
 
@@ -56,7 +53,7 @@ public class PokemonController {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->{
             log.error("Pokemon region not found");
-            return new PokemonRegionException("Unable to find Pokemon Region");
+            return new PokemonRegionNotFoundException(pokemonRegionName);
         });
         var pokemon = pokemonService.createPokemon(pokemonDto, pokemonRegion);
         pokemonService.savePokemon(pokemon);

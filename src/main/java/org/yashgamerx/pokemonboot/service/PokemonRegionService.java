@@ -33,4 +33,11 @@ public class PokemonRegionService {
     public void updatePokemon(PokemonRegion pokemonRegion, PokemonRegionDto pokemonRegionDto) {
         pokemonRegion.setPopulation(pokemonRegionDto.population());
     }
+
+    public PokemonRegionDto mapPokemonRegionToDto(PokemonRegion pokemonRegion) {
+        return PokemonRegionDto.builder()
+                .name(pokemonRegion.getName())
+                .population(pokemonRegion.getPopulation())
+                .build();
+    }
 }

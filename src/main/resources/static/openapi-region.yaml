@@ -16,11 +16,30 @@ paths:
       using name and population'
       requestBody:
         required: true
-        summary: PokemonRegionDTO format
         content:
           application/json:
             schema:
               $ref: "#/components/schemas/PokemonRegionDTO"
+      responses:
+        200:
+          description: 'Pokemon Region was successfully added'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PokemonRegionDTO"
+              examples:
+                example-1:
+                  $ref: "#/components/schemas/PokemonRegionDTO"
+        400:
+          description: 'Pokemon Region validation exception'
+          content:
+            application/json:
+              examples:
+                example-1:
+                  $ref: "#/components/examples/EmptyRegionExample"
+                example-2:
+                  $ref: "#/components/examples/MinimumPopulationExample"
+
 
 components:
   schemas:
@@ -33,3 +52,12 @@ components:
         population:
           type: integer
           example: 100
+  examples:
+    EmptyRegionExample:
+      value:
+        name: must not be blank
+        population: must not be null
+    MinimumPopulationExample:
+      value:
+        name: must not be blank
+        population: must be greater than or equal to 10
