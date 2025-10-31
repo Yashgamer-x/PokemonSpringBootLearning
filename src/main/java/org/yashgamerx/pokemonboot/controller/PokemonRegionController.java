@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dto.PokemonRegionDto;
-import org.yashgamerx.pokemonboot.exception.PokemonRegionNotFoundException;
+import org.yashgamerx.pokemonboot.exception.PokemonRegionNameNotFoundNotFoundException;
 import org.yashgamerx.pokemonboot.service.PokemonRegionService;
 
 @RestController
@@ -28,7 +28,7 @@ public class PokemonRegionController {
     public ResponseEntity<PokemonRegionDto> getPokemonRegion(@RequestParam String name) {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
-                new PokemonRegionNotFoundException(name)
+                new PokemonRegionNameNotFoundNotFoundException(name)
         );
         var pokemonRegionDto = pokemonRegionService.mapPokemonRegionToDto(pokemonRegion);
         return ResponseEntity.ok(pokemonRegionDto);
@@ -39,7 +39,7 @@ public class PokemonRegionController {
         var pokemonRegionName = pokemonRegionDto.name();
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
-                new PokemonRegionNotFoundException(pokemonRegionName)
+                new PokemonRegionNameNotFoundNotFoundException(pokemonRegionName)
         );
         pokemonRegionService.updatePokemon(pokemonRegion, pokemonRegionDto);
         return ResponseEntity.ok(pokemonRegionDto);

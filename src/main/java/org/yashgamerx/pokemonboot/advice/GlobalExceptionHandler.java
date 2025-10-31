@@ -23,7 +23,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(errors);
     }
 
-    @ExceptionHandler(RuntimeException.class)
+    @ExceptionHandler(PokemonRegionNotFoundException.class)
     public ResponseEntity<Object> handlePokemonRegionNotFound(PokemonRegionNotFoundException ex) {
         var body = new ApiError(HttpStatus.NOT_FOUND,  ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);

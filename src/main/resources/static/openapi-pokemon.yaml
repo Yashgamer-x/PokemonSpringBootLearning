@@ -13,16 +13,9 @@ paths:
       summary: Get Pokemon by name
       description: Retrieves a Pokemon's details based on their unique name.
       parameters:
-        - name: id
-          in: query
-          required: false
-          description: ID of the Pokemon to retrieve
-          schema:
-            type: integer
-            example: 1
         - name: name
           in: query
-          required: false
+          required: true
           description: Name of the Pokemon to retrieve
           schema:
             type: string
@@ -58,7 +51,6 @@ paths:
       it will search the region and add it to the mentioned information for the pokemon'
       requestBody:
         required: true
-        description: ''
         content:
           application/json:
             schema:
@@ -73,6 +65,20 @@ paths:
               examples:
                 example-1:
                   $ref: '#/components/schemas/PokemonDto'
+        400:
+          description: PokemonDto was not passed correctly
+          content:
+            application/json:
+              examples:
+                example-1:
+                  $ref: "#/components/examples/EmptyPokemonExample"
+        404:
+          description: Pokemon not found
+          content:
+            application/json:
+              examples:
+                example-1:
+                  $ref: "#/components/examples/PokemonRegionNameNotFoundNotFoundException"
 
 
 components:
@@ -129,4 +135,15 @@ components:
     PokemonNotFoundByNameException:
       value:
         httpStatusCode: NOT_FOUND
+        message: Pokemon with name 'Pika' was not found.
+    PokemonRegionNameNotFoundNotFoundException:
+      value:
+        httpStatusCode: NOT_FOUND
         message: Pokemon region with name 'Pika' was not found.
+    EmptyPokemonExample:
+      value:
+        name: must not be blank
+        level: must be greater than or equal to 10
+        ability: must not be blank
+        pokemonTypes: must not be empty
+        regionName: must not be blank

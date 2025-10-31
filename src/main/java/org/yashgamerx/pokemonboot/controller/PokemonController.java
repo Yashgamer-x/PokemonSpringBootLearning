@@ -20,22 +20,13 @@ public class PokemonController {
     private final PokemonService pokemonService;
 
     @GetMapping("/search")
-    public ResponseEntity<PokemonDto> searchPokemon(
-            @RequestParam(required = false) Integer id,
-            @RequestParam(required = false) String name) {
-
-        if (id == null && (name == null || name.isBlank())) {
-            return ResponseEntity.badRequest().build(); // Neither provided
+    public ResponseEntity<PokemonDto> searchPokemon(@RequestParam String name) {
+        if (name.isBlank()) {
+            return ResponseEntity.badRequest().build();
         }
-
-        var pokemonOptional = (id != null)
-                ? pokemonService.findPokemonById(id)
-                : pokemonService.findPokemonByName(name);
-
+        var pokemonOptional = pokemonService.findPokemonByName(name);
         var pokemon = pokemonOptional.orElseThrow(() ->
-                id != null ?
-                        new PokemonIdNotFoundException(id.toString())
-                        : new PokemonNameNotFoundException(name)
+                new PokemonNameNotFoundException(name)
         );
         var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
         log.info("Pokemon found: {}", pokemonDto.name());
@@ -49,7 +40,7 @@ public class PokemonController {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->{
             log.error("Pokemon region not found");
-            return new PokemonRegionNotFoundException(pokemonRegionName);
+            return new PokemonRegionNameNotFoundNotFoundException(pokemonRegionName);
         });
         var pokemon = pokemonService.createPokemon(pokemonDto, pokemonRegion);
         pokemonService.savePokemon(pokemon);
