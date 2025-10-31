@@ -53,7 +53,7 @@ public class PokemonController {
     public ResponseEntity<PokemonDto> updatePokemon(@Valid @RequestBody PokemonDto pokemonDto){
         var pokemonName = pokemonDto.name();
         var pokemonOptional = pokemonService.findPokemonByName(pokemonName);
-        var pokemon = pokemonOptional.orElseThrow(()->new PokemonNotFoundException("Unable to find Pokemon Region"));
+        var pokemon = pokemonOptional.orElseThrow(()->new PokemonNameNotFoundException(pokemonName));
         var pokemonRegionName = pokemonDto.regionName();
         var pokemonRegion = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         pokemonService.updatePokemon(pokemonDto, pokemon, pokemonRegion);

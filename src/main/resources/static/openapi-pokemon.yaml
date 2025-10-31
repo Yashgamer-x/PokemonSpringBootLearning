@@ -47,7 +47,7 @@ paths:
   /pokemon/add:
     post:
       summary: Adds a new Pokemon
-      description: 'Based on the validity of the region(could be name or id)
+      description: 'Based on the validity of the regionName
       it will search the region and add it to the mentioned information for the pokemon'
       requestBody:
         required: true
@@ -72,6 +72,14 @@ paths:
               examples:
                 example-1:
                   $ref: "#/components/examples/EmptyPokemonExample"
+                example-2:
+                  $ref: "#/components/examples/EmptyPokemonWithNameExample"
+                example-3:
+                  $ref: "#/components/examples/EmptyPokemonWithName&LevelExample"
+                example-4:
+                  $ref: "#/components/examples/EmptyPokemonWithName&Level&AbilityExample"
+                example-5:
+                  $ref: "#/components/examples/EmptyPokemonWithName&Level&Ability&RegionNameExample"
         404:
           description: Pokemon not found
           content:
@@ -79,8 +87,49 @@ paths:
               examples:
                 example-1:
                   $ref: "#/components/examples/PokemonRegionNameNotFoundNotFoundException"
-
-
+  /pokemon/update:
+    put:
+      summary: Update a Pokemon
+      description: 'Based on the validity of the regionName
+      it will search the region and update it to the mentioned information for the pokemon'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PokemonDto"
+      responses:
+        200:
+          description: Pokemon Updated Successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonDto'
+              examples:
+                example-1:
+                  $ref: '#/components/schemas/PokemonDto'
+        400:
+          description: PokemonDto was not passed correctly
+          content:
+            application/json:
+              examples:
+                example-1:
+                  $ref: "#/components/examples/EmptyPokemonExample"
+                example-2:
+                  $ref: "#/components/examples/EmptyPokemonWithNameExample"
+                example-3:
+                  $ref: "#/components/examples/EmptyPokemonWithName&LevelExample"
+                example-4:
+                  $ref: "#/components/examples/EmptyPokemonWithName&Level&AbilityExample"
+                example-5:
+                  $ref: "#/components/examples/EmptyPokemonWithName&Level&Ability&RegionNameExample"
+        404:
+          description: Pokemon not found
+          content:
+            application/json:
+              examples:
+                example-1:
+                  $ref: "#/components/examples/PokemonNotFoundByNameException"
 components:
   schemas:
     PokemonType:
@@ -147,3 +196,21 @@ components:
         ability: must not be blank
         pokemonTypes: must not be empty
         regionName: must not be blank
+    EmptyPokemonWithNameExample:
+      value:
+        level: must be greater than or equal to 10
+        ability: must not be blank
+        pokemonTypes: must not be empty
+        regionName: must not be blank
+    EmptyPokemonWithName&LevelExample:
+      value:
+        ability: must not be blank
+        pokemonTypes: must not be empty
+        regionName: must not be blank
+    EmptyPokemonWithName&Level&AbilityExample:
+      value:
+        pokemonTypes: must not be empty
+        regionName: must not be blank
+    EmptyPokemonWithName&Level&Ability&RegionNameExample:
+      value:
+        pokemonTypes: must not be empty
