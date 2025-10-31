@@ -1,9 +1,9 @@
 package org.yashgamerx.pokemonboot.controller;
 
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.yashgamerx.pokemonboot.dao.PokemonRegion;
 import org.yashgamerx.pokemonboot.dto.PokemonRegionDto;
 import org.yashgamerx.pokemonboot.exception.PokemonRegionNotFoundException;
 import org.yashgamerx.pokemonboot.service.PokemonRegionService;
@@ -21,8 +21,7 @@ public class PokemonRegionController {
     public ResponseEntity<PokemonRegionDto> add(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
         var pokemonRegion = pokemonRegionService.convertPokemonRegionDtoToPokemonRegion(pokemonRegionDto);
         pokemonRegionService.savePokemonRegion(pokemonRegion);
-        return ResponseEntity.ok()
-                .body(pokemonRegionDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(pokemonRegionDto);
     }
 
     @GetMapping("/search")
@@ -36,14 +35,14 @@ public class PokemonRegionController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<PokemonRegion> update(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
+    public ResponseEntity<PokemonRegionDto> update(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
         var pokemonRegionName = pokemonRegionDto.name();
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionName);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(()->
                 new PokemonRegionNotFoundException(pokemonRegionName)
         );
         pokemonRegionService.updatePokemon(pokemonRegion, pokemonRegionDto);
-        return ResponseEntity.ok(pokemonRegion);
+        return ResponseEntity.ok(pokemonRegionDto);
     }
 
 }
