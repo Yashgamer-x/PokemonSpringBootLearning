@@ -13,28 +13,37 @@ paths:
       summary: Get Pokemon by name
       description: Retrieves a Pokemon's details based on their unique name.
       parameters:
+        - name: id
+          in: query
+          required: false
+          description: ID of the Pokemon to retrieve
+          schema:
+            type: integer
+            example: 1
         - name: name
           in: query
-          required: true
+          required: false
           description: Name of the Pokemon to retrieve
           schema:
             type: string
-            example: Charizard
+            example: Pikachu
       responses:
         200:
           description: Successfully retrieved Pokemon
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Pokemon'
+                $ref: '#/components/schemas/PokemonDto'
               examples:
                 example-1:
-                  $ref: '#/components/schemas/Pokemon'
+                  $ref: '#/components/schemas/PokemonDto'
         404:
           description: Pokemon not found
           content:
             application/json:
-              example: null
+              examples:
+                example-1:
+                  $ref: "#/components/examples/PokemonNotFoundByNameException"
   /pokemon/add:
     post:
       summary: Adds a new Pokemon
@@ -53,8 +62,10 @@ paths:
           content:
             application/json:
               schema:
-                type: string
-                example: "Charizard was successfully added"
+                $ref: '#/components/schemas/PokemonDto'
+              examples:
+                example-1:
+                  $ref: '#/components/schemas/PokemonDto'
 
 components:
   schemas:
@@ -81,42 +92,6 @@ components:
         - STEEL
         - FAIRY
         - STELLAR
-    PokemonRegion:
-      type: object
-      properties:
-        id:
-          type: integer
-          example: 2
-        name:
-          type: string
-          example: Kanto
-        population:
-          type: integer
-          example: 5000000
-    Pokemon:
-      type: object
-      properties:
-        id:
-          type: integer
-          example: 1
-        name:
-          type: string
-          example: Charizard
-        level:
-          type: integer
-          example: 36
-        ability:
-          type: string
-          example: Blaze
-        types:
-          type: array
-          items:
-            $ref: "#/components/schemas/PokemonType"
-          example:
-            - FIRE
-            - DRAGON
-        pokemonRegion:
-          $ref: '#/components/schemas/PokemonRegion'
     PokemonDto:
       type: object
       properties:
@@ -142,3 +117,8 @@ components:
         regionId:
           type: integer
           example: 1
+  examples:
+    PokemonNotFoundByNameException:
+      value:
+        httpStatusCode: NOT_FOUND
+        message: Pokemon region with name 'Pika' was not found.

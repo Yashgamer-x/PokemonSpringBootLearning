@@ -20,31 +20,26 @@ public class PokemonController {
     private final PokemonService pokemonService;
 
     @GetMapping("/search")
-    public ResponseEntity<PokemonDto> getPokemonByName(@RequestParam String name) {
-        var pokemonOptional = pokemonService.findPokemonByName(name);
-        var pokemon = pokemonOptional.orElseThrow(()->
-                new PokemonNameNotFoundException(name)
-        );
-        var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
-        log.info("Pokemon found with name {}",pokemon.getName());
-        log.info("Pokemon found with types {}",pokemon.getTypes());
-        return ResponseEntity
-                .ok()
-                .body(pokemonDto);
-    }
+    public ResponseEntity<PokemonDto> searchPokemon(
+            @RequestParam(required = false) Integer id,
+            @RequestParam(required = false) String name) {
 
-    @GetMapping("/{id}")
-    public ResponseEntity<PokemonDto> getPokemonById(@PathVariable String id) {
-        var pokemonId = Integer.parseInt(id);
-        var pokemonOptional = pokemonService.findPokemonById(pokemonId);
-        var pokemon = pokemonOptional.orElseThrow(()->
-                new PokemonIdNotFoundException(id)
+        if (id == null && (name == null || name.isBlank())) {
+            return ResponseEntity.badRequest().build(); // Neither provided
+        }
+
+        var pokemonOptional = (id != null)
+                ? pokemonService.findPokemonById(id)
+                : pokemonService.findPokemonByName(name);
+
+        var pokemon = pokemonOptional.orElseThrow(() ->
+                id != null ?
+                        new PokemonIdNotFoundException(id.toString())
+                        : new PokemonNameNotFoundException(name)
         );
         var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
-        log.info("Pokemon found with id {}",pokemonDto.name());
-        return ResponseEntity
-                .ok()
-                .body(pokemonDto);
+        log.info("Pokemon found: {}", pokemonDto.name());
+        return ResponseEntity.ok(pokemonDto);
     }
 
 
