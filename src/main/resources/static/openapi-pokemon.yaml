@@ -130,6 +130,41 @@ paths:
               examples:
                 example-1:
                   $ref: "#/components/examples/PokemonNotFoundByNameException"
+  /pokemon/delete:
+    delete:
+      summary: Delete Pokemon by name
+      description: Delete a Pokemon based on their unique name.
+      parameters:
+        - name: name
+          in: query
+          required: true
+          description: Name of the Pokemon to retrieve
+          schema:
+            type: string
+            example: Pikachu
+      responses:
+        204:
+          description: Pokemon Successfully Deleted
+          content:
+            application/json:
+              examples:
+                example-1:
+                  value: null
+        400:
+          description: Didn't pass Name
+          content:
+            application/json:
+              examples:
+                example-1:
+                  value: null
+        404:
+          description: Pokemon not found
+          content:
+            application/json:
+              examples:
+                example-1:
+                  $ref: "#/components/examples/PokemonNotFoundByNameException"
+
 components:
   schemas:
     PokemonType:

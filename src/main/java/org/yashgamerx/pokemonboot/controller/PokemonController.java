@@ -64,7 +64,7 @@ public class PokemonController {
     @DeleteMapping("/delete")
     public ResponseEntity<Void> deletePokemon(@RequestParam String name){
         var pokemonOptional = pokemonService.findPokemonByName(name);
-        var pokemon = pokemonOptional.orElseThrow(()->new PokemonNotFoundException("Unable to find Pokemon"));
+        var pokemon = pokemonOptional.orElseThrow(()->new PokemonNameNotFoundException(name));
         pokemonService.deletePokemonById(pokemon.getId());
         return ResponseEntity.noContent().build();
     }
