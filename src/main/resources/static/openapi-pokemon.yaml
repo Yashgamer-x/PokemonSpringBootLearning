@@ -37,6 +37,13 @@ paths:
               examples:
                 example-1:
                   $ref: '#/components/schemas/PokemonDto'
+        400:
+          description: Didn't pass Id or Name
+          content:
+            application/json:
+              examples:
+                example-1:
+                  value: null
         404:
           description: Pokemon not found
           content:
@@ -66,6 +73,7 @@ paths:
               examples:
                 example-1:
                   $ref: '#/components/schemas/PokemonDto'
+
 
 components:
   schemas:
