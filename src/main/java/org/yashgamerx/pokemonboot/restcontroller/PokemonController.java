@@ -1,4 +1,4 @@
-package org.yashgamerx.pokemonboot.controller;
+package org.yashgamerx.pokemonboot.restcontroller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

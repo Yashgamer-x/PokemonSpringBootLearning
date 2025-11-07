@@ -4,14 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
-import org.yashgamerx.pokemonboot.controller.PokemonController;
 
 @Slf4j
 @Aspect
 @Component
 public class PokemonAspect {
 
-    @Pointcut("execution(* org.yashgamerx.pokemonboot.controller.PokemonController.*(..))")
+    @Pointcut("execution(* org.yashgamerx.pokemonboot.restcontroller.PokemonController.*(..))")
     private void getPokemonRequest(){}
 
     @Around("getPokemonRequest()")
