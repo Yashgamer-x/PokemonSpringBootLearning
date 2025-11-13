@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffcb05, #3b4cca);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #2a2a2a;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 350px;
+        }
+
+        .card img {
+            width: 120px;
+        }
+
+        h2 {
+            margin: 20px 0 10px;
+        }
+
+        button {
+            margin-top: 25px;
+            background: #ef5350;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
+    <h2>You’ve Logged Out!</h2>
+    <p>Your Pokémon adventure continues next time.</p>
+
+    <!-- Spring Security logout (must POST) -->
+    <form method="post" action="/logout">
+        <button type="submit">Log Out</button>
+    </form>
+</div>
+
+</body>
+</html>
