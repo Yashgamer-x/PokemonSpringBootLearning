@@ -45,6 +45,7 @@ public class HomeController {
         }
         var username = userSignupDto.username();
         jdbcUserService.addUser(username, password);
+        log.info("Username {} was successfully created",username);
         return "login";
     }
 }

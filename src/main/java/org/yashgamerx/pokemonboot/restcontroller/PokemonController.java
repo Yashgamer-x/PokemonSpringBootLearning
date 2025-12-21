@@ -5,6 +5,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
 import org.yashgamerx.pokemonboot.exception.*;
@@ -20,7 +25,15 @@ public class PokemonController {
     private final PokemonService pokemonService;
 
     @GetMapping("/search")
-    public ResponseEntity<PokemonDto> searchPokemon(@RequestParam String name) {
+    public ResponseEntity<PokemonDto> searchPokemon(
+            @RequestParam String name,
+            SecurityContext securityContext
+    ) {
+        log.info("Security Context: {}", securityContext);
+        var auth = new UsernamePasswordAuthenticationToken("test","test1");
+        securityContext.setAuthentication(auth);
+        SecurityContextHolder.setContext(securityContext);
+        log.info("Security Context: {}", securityContext);
         if (name.isBlank()) {
             return ResponseEntity.badRequest().build();
         }
