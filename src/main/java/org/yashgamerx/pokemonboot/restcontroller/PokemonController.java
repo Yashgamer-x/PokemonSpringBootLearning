@@ -1,5 +1,7 @@
 package org.yashgamerx.pokemonboot.restcontroller;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
+import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.web.bind.annotation.*;
 import org.yashgamerx.pokemonboot.dto.PokemonDto;
 import org.yashgamerx.pokemonboot.exception.*;
@@ -29,11 +32,11 @@ public class PokemonController {
             @RequestParam String name,
             SecurityContext securityContext
     ) {
-        log.info("Security Context: {}", securityContext);
-        var auth = new UsernamePasswordAuthenticationToken("test","test1");
-        securityContext.setAuthentication(auth);
-        SecurityContextHolder.setContext(securityContext);
-        log.info("Security Context: {}", securityContext);
+//        log.info("Security Context: {}", securityContext);
+//        var auth = new UsernamePasswordAuthenticationToken("test","test");
+//        securityContext.setAuthentication(auth);
+//        SecurityContextHolder.setContext(securityContext);
+//        log.info("Security Context: {}", securityContext);
         if (name.isBlank()) {
             return ResponseEntity.badRequest().build();
         }

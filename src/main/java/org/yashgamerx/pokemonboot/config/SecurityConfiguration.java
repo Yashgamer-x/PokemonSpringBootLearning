@@ -6,10 +6,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
 import javax.sql.DataSource;
 
 @Configuration
@@ -35,13 +38,22 @@ public class SecurityConfiguration {
                         .logoutUrl("/logout")            // URL to POST for logout
                         .logoutSuccessUrl("/login?logout") // redirect after logout
                         .permitAll()
+                ).sessionManagement((session) -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
+                        .maximumSessions(1)
+                        .maxSessionsPreventsLogin(true)
                 );
 
         return http.build();
     }
 
     @Bean
-    public JdbcUserDetailsManager jdbcUserDetailsManager(DataSource dataSource){
+    public HttpSessionEventPublisher httpSessionEventPublisher() {
+        return new HttpSessionEventPublisher();
+    }
+
+    @Bean
+    public UserDetailsManager jdbcUserDetailsManager(DataSource dataSource){
         return new JdbcUserDetailsManager(dataSource);
     }
 

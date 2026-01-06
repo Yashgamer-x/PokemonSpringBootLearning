@@ -3,18 +3,18 @@ package org.yashgamerx.pokemonboot.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class JDBCUserService {
 
-    private final JdbcUserDetailsManager jdbcUserDetailsManager;
+    private final UserDetailsManager userDetailsManager;
     private final PasswordEncoder passwordEncoder;
 
     public boolean userExists(String username){
-        return jdbcUserDetailsManager.userExists(username);
+        return userDetailsManager.userExists(username);
     }
 
     public void addUser(String username, String password){
@@ -27,7 +27,7 @@ public class JDBCUserService {
                 .password(encryptedPassword)
                 .roles("USER")
                 .build();
-        jdbcUserDetailsManager.createUser(user);
+        userDetailsManager.createUser(user);
     }
 
 }
